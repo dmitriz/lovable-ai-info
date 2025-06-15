@@ -24,17 +24,24 @@
 
 **Proven Solutions (2025 Update):**
 ```
-IMMEDIATE ACTION (Official Lovable Protocol):
-1. STOP clicking "Try to Fix" immediately after 2nd failure
-2. Switch to Chat Mode: "Something's off. Walk me through what's happening"
-3. Ask for step-by-step debugging help: "What fixes have we tried?"
-4. If still unclear: Revert to stable version and rebuild incrementally
+ENHANCED OFFICIAL PROTOCOL (5-Level Debugging):
+1. STOP "Try to Fix" after 2nd failure
+2. Chat Mode Analysis: "Something's off. Walk me through what's happening"
+3. Initial Investigation: "Take a moment to perform preliminary investigation to uncover root cause"
+4. Deep Analysis: "Perform thorough analysis of flow and dependencies, halt modifications until root cause identified"
+5. System Review: "Comprehensive re-evaluation of entire system required"
 
-PREVENTION (Community-Proven):
-- One feature per prompt (never combine tasks)
-- Use reverse meta prompting: Document debugging sessions
+ESCALATION PROMPTS (Use in sequence):
+Level 1: "Explain the meaning of this error, its origins, and logical sequence that led to it"
+Level 2: "The problem continues. Map the entire system flow—authentication, database, integrations, state management"
+Level 3: "Generate detailed report outlining expected vs actual behavior, specific discrepancies"
+Level 4: "Pause and reassess entire strategy. No code edits—systematic examination required"
+
+PREVENTION (Community + Official):
+- Single feature per prompt (never combine tasks)
+- Use reverse meta prompting: "Document this debugging session as a reusable template"
+- Include "pause and clarify if uncertain" in complex prompts
 - Test after every single change
-- Include diagnostic constraints in every prompt
 ```
 
 ### Issue #2: Unintended Component Modifications
@@ -249,3 +256,136 @@ RESPONSIVE VERIFICATION:
 ---
 
 *This document is continuously updated based on community feedback and emerging usage patterns. Report new issues for inclusion in future updates.*
+
+## Issue #4: Project Scope Creep & "Going Rogue"
+**Community Reports**: "Lovable keeps editing the same files over and over"  
+**Solution Source**: Reddit community (MixPuzzleheaded5003 - 6+ months experience)  
+**Frequency**: High | **Impact**: High
+
+**Symptoms:**
+- AI modifies unrelated files repeatedly
+- Features drift from original requirements
+- Lack of consistent project boundaries
+- AI ignores established patterns and constraints
+
+**Root Causes:**
+- **Missing project foundation**: No persistent documentation to reference
+- **Context decay**: AI forgets project scope over time
+- **Unclear boundaries**: No explicit constraints on AI behavior
+- **Micromanagement approach**: Trying to control every detail in prompts
+
+**Proven Community Solution:**
+```
+FOUNDATION-FIRST METHODOLOGY:
+1. Create comprehensive project documentation (PRD)
+2. Upload documentation to GitHub repo
+3. Reference docs in every prompt: "Read project documentation first"
+4. Use structured workflow with CustomGPTs for consistency
+
+BOUNDARY SETTING PROMPT:
+"Read the project documentation and confirm your understanding of:
+- Core project scope and limitations
+- Established design patterns
+- Technical constraints
+- Files that should not be modified
+Then proceed with the requested change."
+```
+
+**Prevention Strategies:**
+- Always create PRD before coding
+- Upload project docs to GitHub for persistent reference
+- Use community CustomGPTs for structured workflows
+- Include documentation reference in every significant prompt
+
+## Issue #5: Large File Management & Refactoring
+**Community Standard**: Files over 300 lines need refactoring  
+**Source**: Reddit community best practices  
+**Frequency**: Medium | **Impact**: Medium
+
+**Warning Signs:**
+- Single files approaching 300+ lines
+- Complex components becoming unmanageable
+- Performance degradation from large files
+
+**Community-Proven Refactoring Prompt:**
+```
+"Please refactor {filename.tsx} to break it into more manageable files but do not break any current functionality and do not make any design changes either. You are only permitted to split one main file into more smaller files. Make sure to delete any unused files/code as well, but once again DO NOT BREAK ANY FUNCTIONALITY. Make sure to tell me which files were created and their names when you are done."
+```
+
+**Best Practices:**
+- Monitor file sizes regularly
+- Refactor proactively at 300-line threshold
+- Test functionality after every refactor
+- Document new file structure in project docs
+
+### Issue #6: Credit Waste & Inefficient Development
+**Community Reports**: Need to optimize limited credits and free weekend usage  
+**Source**: Reddit free weekend optimization strategies  
+**Frequency**: High | **Impact**: High
+
+**Symptoms:**
+- Running out of credits quickly
+- Repeating same mistakes across projects
+- Inefficient prompt usage
+- Not leveraging external AI models for analysis
+
+**Root Causes:**
+- **No error pattern documentation**: Repeating same mistakes
+- **Inefficient model usage**: Using Lovable for analysis tasks
+- **Prompt bloat**: Overly long prompts causing hallucinations
+- **Manual work avoidance**: Not using Developer Mode for simple changes
+
+**Community-Proven Solutions:**
+```
+MULTI-MODEL OPTIMIZATION STRATEGY:
+1. Use external AI (ChatGPT, Claude) for code analysis and planning
+2. Document all error patterns in Google Docs for reference
+3. Create "safe steps" summaries from analysis
+4. Use Lovable only for actual implementation
+
+CREDIT CONSERVATION TECHNIQUES:
+- Chat Mode planning → "Implement plan" button execution
+- Developer Mode for manual edits (styles, translations)
+- Short, focused prompts to minimize hallucination risk
+- Reference documented patterns instead of re-explaining context
+
+ANALYSIS PROMPTS (External AI):
+"List all past build errors and conflicts in this project"
+"Generate README with architecture, dependencies, tech stack"
+"Review roadmap and suggest architecture optimizations"
+```
+
+**Prevention Strategies:**
+- Maintain error pattern documentation outside Lovable
+- Use external AI for analysis, Lovable for implementation
+- Keep prompts short and specific
+- Learn Developer Mode for simple manual changes
+
+### Issue #7: Prompt Length Optimization Debate
+**Community Split**: Short vs Long prompt effectiveness  
+**Context**: Hallucination risk vs accuracy trade-offs  
+**Frequency**: Ongoing | **Impact**: Medium
+
+**Short Prompt Advocates (Community Experience):**
+- Less context = lower hallucination risk
+- Single errors can break everything with long prompts
+- Token-efficient for simple tasks
+
+**Long Prompt Advocates (Community Experience):**
+- Step-by-step instructions improve accuracy
+- More context prevents misunderstanding
+- Better for complex features
+
+**Balanced Approach:**
+```
+START SHORT STRATEGY:
+1. Begin with minimal, focused prompt
+2. Add context only when results are unclear
+3. Monitor for hallucinations with each addition
+4. Document what prompt length works for specific task types
+
+RISK ASSESSMENT:
+- Simple tasks: Short prompts preferred
+- Complex features: Structured long prompts with clear sections
+- Debugging: Medium prompts with specific error context
+```

@@ -56,6 +56,49 @@ STOP → Switch to Chat Mode → Investigate → Plan → Implement
 - Be explicit about existing patterns
 - Provide context in each prompt
 
+### 4. The Meta Prompting Gap
+**Problem:** Users miss out on AI's ability to improve prompts and document solutions
+
+**Warning Signs:**
+- Repeatedly unclear or incomplete prompts
+- No record of how tricky bugs were solved
+
+**Solution:**
+```
+Use meta prompting:
+"Review my last prompt and suggest improvements."
+"Rewrite this prompt to be more specific and detailed."
+
+Use reverse meta prompting:
+"Summarize the errors we encountered and how we resolved them. Create a reusable prompt template."
+```
+
+**Prevention:**
+- Always ask the AI to review and improve prompts for complex tasks
+- Document debugging sessions as templates for future use
+
+### 5. The Debugging Escalation Trap
+**Problem:** Stuck in endless fix attempts without structured escalation
+
+**Warning Signs:**
+- "Try to Fix" used more than twice
+- No clear diagnosis after multiple attempts
+
+**Solution:**
+```
+Debugging Escalation Protocol:
+1. STOP "Try to Fix" after 2nd failure
+2. Chat Mode: "Walk me through what's happening"
+3. Initial Investigation: "Analyze logs, workflows, dependencies"
+4. Deep Analysis: "Halt changes, document root cause"
+5. System Review: "Map flow, document discrepancies, no code edits until clear"
+```
+
+**Prevention:**
+- Follow escalation steps strictly
+- Use Chat Mode for analysis before further fixes
+- Document findings and solutions
+
 ## Feature-Specific Challenges
 
 ### Authentication Issues

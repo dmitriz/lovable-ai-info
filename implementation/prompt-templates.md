@@ -135,6 +135,57 @@ to verify the app operates precisely as it did before."
 
 ---
 
+## 🛠️ Community CustomGPT Integration Templates
+
+### Foundation-First Development (Community Best Practice)
+```
+PROJECT SETUP WORKFLOW:
+1. "Use Lovable Base Prompt Generator to structure initial idea"
+2. "Use Lovable PRD Generator to create comprehensive documentation"  
+3. "Upload PRD and design docs to GitHub repo"
+4. "Reference documentation in every Lovable prompt"
+
+DOCUMENTATION REFERENCE PROMPT:
+"Before making any changes, read the project documentation from GitHub and confirm your understanding of:
+- Project scope and core features
+- Design system and patterns
+- Technical constraints and limitations
+- Files that should remain unchanged
+
+Then proceed with: [your specific request]"
+```
+
+### Community Refactoring Template (300+ Line Rule)
+```
+FILE SIZE MONITORING:
+"Review the current project and identify any files over 300 lines that need refactoring for maintainability."
+
+SAFE REFACTORING:
+"Please refactor {filename.tsx} to break it into more manageable files but do not break any current functionality and do not make any design changes either. You are only permitted to split one main file into more smaller files. Make sure to delete any unused files/code as well, but once again DO NOT BREAK ANY FUNCTIONALITY. Make sure to tell me which files were created and their names when you are done."
+
+POST-REFACTOR VERIFICATION:
+"Confirm all functionality works exactly as before refactoring. Test key user flows and report any issues."
+```
+
+### Debugging with Community Experience (6+ Months Patterns)
+```
+SYSTEMATIC DEBUGGING APPROACH:
+"Use the Lovable Debugging Wizard approach:
+1. Identify the specific error and context
+2. Review recent changes that might have caused it
+3. Check for common patterns in similar issues
+4. Provide templated debugging prompt
+5. Verify fix doesn't break other functionality"
+
+ANTI-ROGUE DEBUGGING:
+"This is a debugging session. Focus only on the specific error:
+[Error details]
+
+Do not modify unrelated files or features. Reference project documentation for context and constraints."
+```
+
+---
+
 ## 🔧 Debugging Templates
 
 ### Error Recovery Protocol
@@ -263,6 +314,89 @@ Share this analysis before making any code changes."
 
 ---
 
+## 🧠 Advanced Prompting Templates (2025 Update)
+
+### Meta Prompting (AI-Assisted Improvement)
+```
+PROMPT ENHANCEMENT:
+"Review my last prompt and identify any ambiguity or missing info. How can I rewrite it to be more concise and precise?"
+
+PROMPT OPTIMIZATION:
+"Rewrite this prompt to be more specific and detailed: '[Your original prompt]'"
+
+ALTERNATIVE APPROACH:
+"The current approach isn't working. Suggest 2-3 alternative strategies for [specific goal] and explain the trade-offs of each."
+```
+
+### Reverse Meta Prompting (Documentation)
+```
+SESSION DOCUMENTATION:
+"Summarize the errors we encountered while setting up [feature] and how they were resolved. Create a detailed prompt I can use next time to avoid these mistakes."
+
+SOLUTION TEMPLATE CREATION:
+"Based on our successful implementation of [feature], create a reusable prompt template that captures the key decisions and constraints for future similar projects."
+
+DEBUGGING PLAYBOOK:
+"Document the debugging process we just completed as a step-by-step troubleshooting guide for [specific error type]."
+```
+
+### Stripe Integration (Official Template)
+```
+STRIPE SETUP:
+"Initiate a Stripe connection in test mode using the configuration detailed below:
+
+PRODUCT DETAILS:
+- Product IDs: [Your Product IDs]  
+- Pricing Model: [One-time or Subscription]
+- Webhook Endpoint: [Your Webhook Endpoint]
+
+FRONTEND REQUIREMENTS:
+- Style the payment form as: [Describe desired payment form]
+- Success Redirect: [Success URL]
+- Cancel Redirect: [Cancel URL]
+
+CONSTRAINTS:
+- Use test mode only
+- Include proper error handling
+- Ensure mobile responsiveness
+
+Please refrain from altering any existing code and confirm all necessary information is included."
+
+NOTE: Use Stripe Secret Key and Webhook Signing Secret securely in Supabase Edge Function Secrets—never include them in prompts.
+```
+
+### Advanced Debugging Templates
+```
+INITIAL ERROR INVESTIGATION:
+"The same error continues to occur. Take a moment to perform a preliminary investigation to uncover the root cause. Examine logs, workflows, and dependencies before making any changes. Provide analysis first."
+
+DEEP ERROR ANALYSIS:
+"This issue persists without resolution. Perform a thorough analysis of the flow and dependencies. Stop all modifications until the root cause is identified with complete certainty. Document failures, reasons, and patterns observed."
+
+SYSTEM-WIDE REVIEW:
+"This requires a comprehensive re-evaluation of the entire system. Map the flow systematically—covering authentication, database interactions, integrations, state management, and redirects. Evaluate each component to pinpoint failures."
+
+ROOT CAUSE DOCUMENTATION:
+"Create a detailed report outlining expected vs actual behavior, identifying specific discrepancies. Avoid code suggestions until you have evidence-based insights with clear reasoning."
+```
+
+### Mobile-First Responsive (Enhanced)
+```
+COMPREHENSIVE RESPONSIVE UPDATE:
+"Always make things responsive on all breakpoints, with a focus on mobile first. Use modern UI/UX best practices for determining how breakpoints should change the components. Use ShadCN and Tailwind built-in breakpoints instead of anything custom, unless the user prompts for custom breakpoints directly.
+
+MOBILE OPTIMIZATION PROCESS:
+1. Analyze current layout and responsiveness
+2. Identify necessary adjustments for smaller screens and touch interactions
+3. Outline detailed plan before editing any code
+4. Test thoroughly across devices
+5. Ensure app behaves exactly as it does on desktop
+
+If unsure about any aspect, pause and propose solutions before proceeding."
+```
+
+---
+
 ## 🎯 Success Patterns
 
 ### The 4-Part Precision Prompt
@@ -316,4 +450,85 @@ use next time to avoid these issues."
 
 ---
 
-*Last Updated: Based on Lovable Prompting Handbook (Jan 2025) + Community Reports*
+## 🎯 Credit Optimization Templates (Community-Proven)
+
+### Multi-Model Analysis Workflow
+```
+EXTERNAL AI ANALYSIS PROMPTS (Use ChatGPT, Claude, etc.):
+
+PROJECT REVIEW:
+"Analyze this Lovable project code and list all past build errors and conflicts. 
+[Paste project files or descriptions]"
+
+ARCHITECTURE ASSESSMENT:
+"Generate a comprehensive README for this project including:
+- Architecture overview and design patterns
+- Complete dependency list and versions  
+- Tech stack breakdown and rationale
+- Database schema and relationships
+- API endpoints and integration points
+- Deployment requirements"
+
+ROADMAP OPTIMIZATION:
+"Based on this project roadmap: [paste roadmap]
+Suggest architecture optimizations for the next development phase.
+Identify potential bottlenecks and recommend solutions."
+
+COMPARATIVE ANALYSIS:
+"Compare the outputs from different AI models for this feature request and identify:
+- Consistency across recommendations
+- Conflicting approaches and their trade-offs
+- Best practices alignment
+- Implementation complexity assessment"
+```
+
+### Credit Conservation Implementation
+```
+EFFICIENT LOVABLE WORKFLOW:
+
+PLANNING PHASE (Chat Mode):
+"Create a detailed implementation plan for [specific feature]:
+1. Break down into smallest possible steps
+2. Identify dependencies and prerequisites  
+3. Suggest order of implementation
+4. Highlight potential risks or complications"
+
+EXECUTION PHASE:
+→ Review plan in Chat Mode
+→ Click "Implement plan" button for automated execution
+→ Use Developer Mode for manual tweaks (styles, text, simple logic)
+
+MANUAL OPTIMIZATION:
+- Handle translations manually in Developer Mode
+- Adjust CSS/styling without prompts
+- Update static content directly
+- Save prompts for complex logic only
+```
+
+### Smart Prompt Length Strategy
+```
+PROGRESSIVE PROMPT BUILDING:
+
+LEVEL 1 - MINIMAL:
+"Add user authentication"
+
+LEVEL 2 - CLARIFIED (if Level 1 unclear):
+"Add email/password authentication using Supabase with signup and login pages"
+
+LEVEL 3 - DETAILED (if Level 2 has issues):
+"Implement Supabase authentication system:
+- Signup page with email/password validation
+- Login page with error handling  
+- Protected dashboard route
+- Logout functionality
+- Redirect logic after successful auth"
+
+LEVEL 4 - COMPREHENSIVE (complex features only):
+"Build complete authentication flow with Supabase:
+[Include full context, constraints, and detailed requirements]"
+
+HALLUCINATION MONITORING:
+- Watch for unexpected changes in Level 3+ prompts
+- Revert to shorter prompts if AI adds unwanted features
+- Document successful prompt length for each feature type
+```

@@ -117,6 +117,27 @@ Try specific prompt with clear context
 Still not working after 2 attempts?
     ↓ YES → Chat Mode investigation
     ↓ NO → Continue development
+
+## Advanced Prompting & Debugging (2025)
+
+### Meta Prompting
+```
+"Review my last prompt and suggest improvements for clarity and completeness."
+"Rewrite this prompt to be more specific and detailed: '[Your original prompt]'"
+```
+
+### Reverse Meta Prompting
+```
+"Summarize the errors we encountered and how we resolved them. Create a reusable prompt template for future use."
+```
+
+### Debugging Escalation Protocol
+```
+1. STOP "Try to Fix" after 2nd failure
+2. Chat Mode: "Walk me through what's happening"
+3. Initial Investigation: "Preliminary analysis of logs, workflows, dependencies"
+4. Deep Analysis: "Thorough review, halt changes until root cause is certain"
+5. System Review: "Map entire flow, document discrepancies, no code edits until clear"
 ```
 
 ## Best Practices Checklist
@@ -141,3 +162,68 @@ Still not working after 2 attempts?
 - [ ] Test with different user roles
 - [ ] Monitor app performance
 - [ ] Sync with GitHub regularly
+
+---
+
+### Community CustomGPTs Workflow
+```
+STRUCTURED DEVELOPMENT PROCESS:
+1. Base Prompt Generator: "Brain dump your idea, get structured Lovable prompt"
+2. PRD Generator: "Create comprehensive project documentation"
+3. Design Assistant: "Generate detailed design guidelines"
+4. Upload docs to GitHub repo
+5. Reference docs in every Lovable prompt
+6. Use Debugging Wizard for systematic error resolution
+```
+
+### Refactoring Protocol (Community Standard)
+```
+TRIGGER: Files over 300 lines
+
+REFACTORING PROMPT:
+"Please refactor {filename.tsx} to break it into more manageable files but do not break any current functionality and do not make any design changes either. You are only permitted to split one main file into more smaller files. Make sure to delete any unused files/code as well, but once again DO NOT BREAK ANY FUNCTIONALITY. Make sure to tell me which files were created and their names when you are done."
+```
+
+### Preventing "Rogue" Behavior
+```
+FOUNDATION PROMPT:
+"Read the project documentation and confirm your understanding of:
+- Core project scope and limitations  
+- Established design patterns
+- Technical constraints
+- Files that should not be modified
+Then proceed with the requested change."
+```
+
+### Credit Conservation & Multi-Model Strategy
+```
+EXTERNAL AI ANALYSIS (ChatGPT, Claude):
+"List all past build errors and conflicts in this project"
+"Generate README with architecture, dependencies, tech stack"
+"Review project roadmap and suggest optimizations"
+
+DOCUMENTATION WORKFLOW:
+1. Save analysis in Google Docs
+2. Create "safe steps" summaries  
+3. Document error patterns and solutions
+4. Reference docs in Lovable prompts
+
+EFFICIENT LOVABLE USAGE:
+Chat Mode: "Create implementation plan for [feature]"
+→ Click "Implement plan" button
+→ Use Developer Mode for simple edits
+```
+
+### Prompt Length Optimization
+```
+SHORT PROMPT STRATEGY (Community Preference):
+- Start minimal and focused
+- Add context only when needed
+- Monitor hallucination risk
+- Single goal per prompt
+
+EXAMPLE PROGRESSION:
+1. "Add user authentication"
+2. If unclear: "Add email/password authentication using Supabase"
+3. If still issues: "Add Supabase auth with signup/login pages, redirect to dashboard"
+```
