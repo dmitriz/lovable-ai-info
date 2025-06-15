@@ -11,24 +11,41 @@ Build applications that are **fast to create**, **error-free**, and **maintainab
 Complete systematic approach to bulletproof development  
 *Front-end first doctrine, 4-part prompts, surgical integration* (10 min read)
 
+## Implementation Toolkit
+
+### 🚀 [Quick Start Guide](./implementation/quick-start-guide.md) **← FAST TRACK**
+Step-by-step procedures for immediate implementation  
+*1-hour setup, proven workflows, error recovery* (5 min read)
+
+### �� [Prompt Templates](./implementation/prompt-templates.md)
+Copy-paste ready, battle-tested prompts  
+*Foundation templates, protection patterns, debugging protocols* (3 min scan)
+
+### ⚠️ [Community Issues](./implementation/community-issues.md)
+Real-world pitfalls and proven solutions  
+*Error patterns, root causes, prevention strategies* (4 min read)
+
+### ✅ [Prompt Review System](./implementation/prompt-review-system.md)
+Quality assurance checklist and scoring  
+*Risk assessment, team workflows, continuous improvement* (3 min read)
+
+## Research & Theory
+
 ### ⚡ [Quick Reference](./lovable-quick-reference.md)
-Copy-paste templates for daily development  
-*Emergency protocols, essential templates, quality gates* (3 min scan)
+Advanced patterns and emergency protocols  
 
 ### 🎯 [Prompting Essentials](./lovable-prompting-essentials.md)  
-Advanced techniques for robust results  
-*CLEAR framework 2.0, context management, visual prompting* (8 min read)
+Theoretical foundations and advanced techniques
 
 ### 📊 [Success Patterns](./lovable-success-patterns.md)
-Proven workflows and optimization strategies  
-*Precision templates, meta-prompting, quality assurance* (6 min read)
+Proven workflows and optimization strategies
 
-### � [Executive Summary](./lovable-executive-summary.md) | [Pitfalls & Solutions](./lovable-pitfalls-solutions.md) | [Collaboration Guide](./lovable-collaboration-guide.md)
+### 📋 [Executive](./lovable-executive-summary.md) | [Pitfalls](./lovable-pitfalls-solutions.md) | [Collaboration](./lovable-collaboration-guide.md)
 
 ## Quick Start Path
 
-**New to Lovable?** Zero-Error Methodology → Quick Reference → First project  
-**Having issues?** Pitfalls & Solutions → Zero-Error Methodology → Success Patterns  
+**New to Lovable?** Zero-Error Methodology → Quick Start Guide → Prompt Templates  
+**Having issues?** Community Issues → Zero-Error Methodology → Prompt Review System  
 **Team leader?** Executive Summary → Success Patterns → Collaboration Guide
 
 ## Key Research Insights

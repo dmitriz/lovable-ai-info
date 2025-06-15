@@ -1,53 +1,115 @@
 # Lovable Zero-Error Methodology
 
+*Updated Jan 2025 - Based on official prompting handbook + community insights*
+
 ## Core Problem + Solution
 **Problem**: 20x speed → fragile code + infinite error loops + wasted credits  
 **Solution**: Systematic constraints that preserve speed while eliminating fragility
 
 ## Three Pillars
-1. **Constrained Scope**: One prompt = one feature
-2. **Persistent Context**: Knowledge Base prevents AI memory loss  
-3. **Surgical Integration**: Frontend first, then piece-by-piece backend
 
-## Setup: Knowledge Base Template
+### 1. Constrained Scope
+**Rule**: One prompt = one feature = one file change
+**Why**: Prevents AI confusion and reduces error cascade
+**How**: Use explicit file protection in every prompt
+
+### 2. Persistent Context  
+**Rule**: Knowledge Base + context anchoring prevents AI memory loss
+**Why**: LLMs forget early instructions (context decay)
+**How**: Always reference Knowledge Base in prompts
+
+### 3. Mobile-First Integration
+**Rule**: Every prompt includes responsive design requirement
+**Why**: 50%+ of users access via mobile, most errors are responsive failures
+**How**: Add mobile-first constraint to every single prompt
+
+## Setup: Knowledge Base Template (Copy-Paste)
 ```
-PROJECT: [One clear sentence: purpose + audience]
+PROJECT: [One sentence: what it does + who for]
 
-TECH STACK: React/Vite + Tailwind + Supabase
+TECH STACK: React/Vite + Tailwind CSS + ShadCN + Supabase
 
 DESIGN SYSTEM:
-- Primary: #3B82F6 | Buttons: rounded-lg py-2 px-4
-- Cards: border border-gray-200 rounded-lg p-4
+- Colors: Primary #3B82F6, Secondary #64748B, Accent #10B981
+- Typography: Inter font, clean hierarchy
+- Components: rounded-lg, consistent spacing (p-4, gap-4)
+- Mobile-first responsive all breakpoints
 
-FEATURES: [Numbered list of 3-5 core features]
+USER FLOW: Users start at [page] → [action] → [result] → [next step]
+
+FEATURES (In-Scope):
+1. [Feature] - [Brief description]
+2. [Feature] - [Brief description] 
+3. [Feature] - [Brief description]
 
 CONSTRAINTS:
-- Mobile-first responsive
-- [Critical business rules]
-- [User permission structure]
+- Mobile-first responsive design
+- [Critical business rule]
+- [Security requirement]
+
+OUT OF SCOPE: [List what's not included]
 ```
 
 ## The 4-Part Precision Prompt
 ```
-Context: "You are a [specific role] specializing in [domain]"
+Context: "You are a senior React developer specializing in [domain]"
 Task: "Implement [single specific feature]"
-Guidelines: "Use [tech]. Follow [patterns]"
-Constraints: "Don't modify [files]. Must use [systems]"
+Guidelines: "Use ShadCN + Tailwind. Mobile-first responsive on all breakpoints."
+Constraints: "Don't modify [specific files]. Focus only on [target component]."
 ```
 
 ## Front-End First Doctrine
 **Why**: Isolates UI bugs from backend complexity
 
-**Phase 1**: Static UI with mock data
+### Phase 1: Static UI (Always First)
 ```
-"Create [Component] with hardcoded data:
-const mockData = [{id: 1, name: 'Example'}]
-Build complete UI functionality with this data."
+"Create [Component] with mock data:
+const mockData = [{id: 1, name: 'Example', status: 'active'}]
+
+Build complete UI with this static data. Include loading/empty states.
+Mobile-first responsive design. Don't modify [other files]."
 ```
 
-**Phase 2**: Surgical backend connection
+### Phase 2: Surgical Backend Connection  
 ```
 "Connect [Component] to Supabase [table]:
+Replace mock data with real queries. Add error handling.
+Don't modify other components."
+```
+
+### Phase 3: Enhancement Only After Success
+```
+"Add [specific enhancement] to working [Component]:
+[Detailed requirement]
+Maintain existing functionality. Don't modify other files."
+```
+
+## Error Recovery Protocol (Critical)
+
+### When Error Loops Start:
+1. **STOP** clicking "Try to Fix" after 2nd failure
+2. Switch to **Chat Mode**
+3. Ask: **"Something's off. Walk me through what's happening"**
+4. Get diagnosis **without changes first**
+5. If unclear: **"What fixes have we tried?"**
+6. Last resort: **Revert to stable version**
+
+### Prevention (Use Every Time):
+- Single feature per prompt
+- Always include mobile responsiveness
+- Explicit file protection constraints
+- Reference Knowledge Base context
+- Test after every change
+
+## Success Metrics
+- **95%+ first-attempt success** with reviewed prompts
+- **Zero infinite loops** from constrained prompts  
+- **50% fewer credits used** vs unconstrained development
+- **Consistent progress** without major setbacks
+
+---
+
+*See `/implementation/` folder for copy-paste templates and detailed procedures.*
 Replace mock data with database queries.
 Add error handling and loading states."
 ```
