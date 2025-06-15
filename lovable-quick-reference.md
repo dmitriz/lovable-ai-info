@@ -1,95 +1,227 @@
-# Lovable AI Quick Reference Guide
+# Lovable AI Quick Reference: Fast, Precise, Error-Free
 
-## Prompt Templates for Common Tasks
+## Emergency Debug Protocol
+```
+When stuck in error loops:
+1. STOP clicking "Try to Fix"
+2. Chat Mode: "Analyze this error without making changes"
+3. Review AI diagnosis
+4. If complex: Revert to last stable version
+5. Try different approach
+```
+
+## Power Prompt Templates
+
+### The 4-Part Precision Template
+```
+Context: "You are a [specific expertise] developer"
+Task: "Implement [single specific feature]"
+Guidelines: "Use [tech stack]. Follow [patterns]"
+Constraints: "Don't modify [files]. Must use [existing systems]"
+```
 
 ### Initial App Creation
 ```
-"Create a [app type] application with:
-- User authentication (email/password)
-- [Primary feature] with [specific requirements]
-- Clean, modern UI using Tailwind CSS
-- PostgreSQL database via Supabase
-- Mobile-responsive design"
+"Create a [app type] with essential features only:
+
+Core MVP:
+- User auth (email/password via Supabase)
+- [Primary feature with specific requirements]
+- Clean, mobile-responsive UI (Tailwind CSS)
+- PostgreSQL database with basic schema
+
+Constraints:
+- Start with static/mock data for UI
+- No third-party integrations yet
+- Focus on single user flow"
 ```
 
-### Feature Addition
+### Safe Feature Addition
 ```
-"Add [feature name] to the [page/component]:
-- Functionality: [detailed description]
-- UI elements: [specific requirements]
-- Data: [what to store/retrieve]
-- Permissions: [who can access/modify]
-- Styling: [consistent with existing design]"
-```
+"Add [feature name] to [specific page/component]:
 
-### Bug Fixing Strategy
-```
-1. Switch to Chat Mode
-2. "Investigate this issue without making changes: [error/problem]"
-3. Review suggested solution
-4. If approved: "Implement the fix you suggested"
-```
+Functionality:
+- [Detailed behavior description]
+- [Data requirements and validation]
+- [User permission rules]
 
-### Database Schema
-```
-"Create a database table for [entity] with:
-- [field1]: [type] (required/optional)
-- [field2]: [type] with [constraints]
-- Relationships: [connections to other tables]
-- Security: [row-level policies needed]"
+UI Requirements:
+- [Specific styling needs]
+- [Mobile responsive behavior]
+- [Accessibility considerations]
+
+CRITICAL: Don't modify [existing components]. Use existing [design system/styles]."
 ```
 
-### UI Refinement
+### Database Schema Creation
 ```
-"Update the [component] styling:
-- Change [specific element] to [desired appearance]
-- Maintain [existing design principles]  
-- Ensure mobile responsiveness
-- Keep accessibility standards"
+"Create Supabase table [table_name] for [purpose]:
+
+Fields:
+- id: UUID primary key (uuid_generate_v4())
+- [field]: [postgres_type] [constraints] - [description]
+- created_at: timestamptz default now()
+- [foreign_key]: UUID references [other_table](id)
+
+Security:
+- Enable Row Level Security
+- Policy: [specific access rule]
+- Example: auth.uid() = user_id for user-owned data
+
+Show me the SQL before applying changes."
 ```
 
-## Emergency Commands
-
-### When Things Go Wrong
-- **Restore Point**: "Revert to the last working version"
-- **Clean Slate**: "Remove all recent changes to [component]"
-- **Fresh Start**: "Create a new [component] from scratch with [requirements]"
-
-### Debug Mode
-- **Investigation**: "Analyze why [feature] isn't working without changing code"
-- **Comparison**: "Compare current version with version from [time] and highlight differences"
-- **Explanation**: "Explain what this code does: [paste code]"
-
-## Workflow Optimization
-
-### Development Sequence
-1. **Static UI First**: Build layout and components
-2. **Data Layer**: Add database tables and basic CRUD
-3. **Authentication**: Implement user system
-4. **Business Logic**: Add specific app functionality
-5. **Polish**: Styling, responsive design, error handling
-
-### Credit Conservation
-- Use Visual Editor for simple styling changes
-- Plan prompts before sending
-- Use Chat Mode for exploration
-- Be specific to avoid iterations
-
-### Quality Checkpoints
-After every 3-5 prompts:
-- Test the app manually
-- Check console for errors
-- Verify mobile responsiveness
-- Pin current version if stable
-
-## Troubleshooting Decision Tree
-
+### Secure API Integration
 ```
-Issue Encountered
-    ↓
-Is it a simple UI tweak?
-    ↓ YES → Use Visual Editor
-    ↓ NO
+"Create Supabase Edge Function [function-name]:
+
+Purpose: [specific goal - be explicit]
+Input: JSON payload with [parameters]
+External API: [service name and endpoint]
+Security: Store [API_KEY_NAME] in environment variables
+Output: Return structured JSON with [fields]
+
+CRITICAL: Never expose API keys client-side."
+```
+
+### Visual Debugging Template
+```
+"Fix the UI issue shown in attached screenshot:
+
+Problem: [specific visual issue]
+Expected: [how it should look/behave]
+Location: [page/component affected]
+Constraints: [what not to change]
+
+Screenshot: [attach image with arrows/circles highlighting issue]"
+```
+
+### Authentication Setup
+```
+"Implement secure user authentication:
+
+Flow: Email/password signup → verification → login → dashboard
+Pages: /signup, /login, /dashboard
+Components: AuthForm, ProtectedRoute, UserProvider
+Database: profiles table linked to auth.users
+Redirects: Success → /dashboard, Logout → /
+
+Don't modify: existing [Navigation] component"
+```
+
+## Lightning-Fast Development Patterns
+
+### The 90-Second Feature Pattern
+1. **15s Planning**: Know exactly what you want
+2. **45s Prompting**: Use 4-part template with specifics
+3. **30s Testing**: Verify it works immediately
+
+### Front-End First Strategy
+```
+Phase 1: Static UI
+"Create [component] with mock data:
+const mockData = [hardcoded examples]
+Show complete UI working with this data."
+
+Phase 2: Backend Connection
+"Connect [component] to Supabase [table].
+Replace mock data with real database queries."
+```
+
+### Single-Brick Development
+**Never**: "Add search, filters, sorting, and pagination"  
+**Always**: One feature per prompt
+1. "Add search functionality to user list"
+2. "Add filter dropdown for user status"  
+3. "Add sorting by name and date"
+4. "Add pagination with 10 items per page"
+
+## Critical Error Prevention
+
+### Context Anchor Strategy
+Repeat key constraints in every related prompt:
+```
+"Add [feature]. 
+
+PROJECT CONTEXT:
+- Task management app for teams
+- Users: admin, manager, member roles
+- Theme: Blue (#3B82F6) with dark mode
+- Auth: Supabase email/password only
+
+[Your specific feature request]"
+```
+
+### Safe Refactoring Protocol
+```
+"Refactor [component] to improve [specific aspect]:
+
+CRITICAL CONSTRAINTS:
+- External API must remain unchanged
+- All prop names must stay the same
+- Existing functionality must work identically
+- Component behavior cannot change
+
+Goal: [internal improvement without breaking anything]"
+```
+
+## Emergency Recovery Commands
+
+### When Stuck in Error Loops
+```
+STOP → Chat Mode → "Investigate this without changes"
+```
+
+### When AI Ignores Instructions
+```
+"IMPORTANT: You missed the constraint about [specific requirement]. 
+Please redo the last change while following this rule: [repeat constraint]"
+```
+
+### When Code Gets Messy
+```
+"Review [component] and identify issues with:
+- Code organization
+- Performance problems  
+- Potential bugs
+- Style inconsistencies
+
+Provide improvement plan without implementing changes."
+```
+
+## Quality Gates Checklist
+
+### Before Each Prompt
+- [ ] Single, specific goal defined
+- [ ] Key constraints identified
+- [ ] Success criteria clear
+- [ ] Related components protected
+
+### After Each Change
+- [ ] Feature works as intended
+- [ ] No console errors
+- [ ] Mobile responsive
+- [ ] Existing features still work
+
+### Before Moving On
+- [ ] Thoroughly tested
+- [ ] Version pinned
+- [ ] Knowledge Base updated
+- [ ] Ready for next increment
+
+## Success Indicators
+
+**✅ You're expert-level when:**
+- 90%+ prompts work on first try
+- Zero infinite error loops
+- AI consistently follows your style
+- Development feels rapid but controlled
+
+**🚨 Warning signs:**
+- Burning credits on fixes
+- AI ignoring specific instructions  
+- Code quality declining
+- More debugging than building
 Is it a logic/data problem?
     ↓ YES → Switch to Chat Mode
     ↓ NO
