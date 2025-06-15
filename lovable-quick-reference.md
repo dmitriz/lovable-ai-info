@@ -1,95 +1,111 @@
-# Lovable AI Quick Reference Guide
+# Lovable AI Quick Reference
 
-## Prompt Templates for Common Tasks
-
-### Initial App Creation
+## Emergency Debug Protocol
 ```
-"Create a [app type] application with:
-- User authentication (email/password)
-- [Primary feature] with [specific requirements]
-- Clean, modern UI using Tailwind CSS
-- PostgreSQL database via Supabase
-- Mobile-responsive design"
+Error loop? → STOP "Try to Fix" → Chat Mode: "Analyze without changes"
+→ Review diagnosis → If complex: Revert → Try different approach
+```
+
+## 4-Part Precision Template
+```
+Context: "You are [role] specializing in [domain]"
+Task: "Implement [single feature]"
+Guidelines: "Use [tech]. Follow [patterns]"
+Constraints: "Don't modify [files]. Use [systems]"
+```
+
+## Essential Templates
+
+### App Creation
+```
+"Create [app type] with MVP features:
+- User auth (email/password via Supabase)
+- [Primary feature with specifics]
+- Mobile-responsive UI (Tailwind)
+- Start with static/mock data for UI"
 ```
 
 ### Feature Addition
 ```
-"Add [feature name] to the [page/component]:
-- Functionality: [detailed description]
-- UI elements: [specific requirements]
-- Data: [what to store/retrieve]
-- Permissions: [who can access/modify]
-- Styling: [consistent with existing design]"
-```
-
-### Bug Fixing Strategy
-```
-1. Switch to Chat Mode
-2. "Investigate this issue without making changes: [error/problem]"
-3. Review suggested solution
-4. If approved: "Implement the fix you suggested"
+"Add [feature] to [component]:
+Functionality: [detailed behavior]
+UI: [specific styling/layout]
+Data: [requirements/validation]
+CRITICAL: Don't modify [existing components]"
 ```
 
 ### Database Schema
 ```
-"Create a database table for [entity] with:
-- [field1]: [type] (required/optional)
-- [field2]: [type] with [constraints]
-- Relationships: [connections to other tables]
-- Security: [row-level policies needed]"
+"Create Supabase table [name]:
+- id: UUID primary key (uuid_generate_v4())
+- [field]: [type] [constraints]
+- created_at: timestamptz default now()
+Security: Enable RLS, policy: auth.uid() = [field]
+Show SQL before applying."
 ```
 
-### UI Refinement
+### Secure API
 ```
-"Update the [component] styling:
-- Change [specific element] to [desired appearance]
-- Maintain [existing design principles]  
-- Ensure mobile responsiveness
-- Keep accessibility standards"
+"Create Edge Function [name]:
+Purpose: [goal] | Input: [params] | API: [service]
+Security: Store [KEY] in env vars | Output: [format]
+Never expose keys client-side."
 ```
+
+### Auth Setup
+```
+"Implement auth flow:
+Pages: /signup, /login, /dashboard
+Flow: signup → verify → login → dashboard
+Errors: clear messages | Success: redirect
+Don't modify: Navigation component"
+```
+
+## Development Patterns
+
+### Front-End First
+```
+Phase 1: "Create [Component] with mock data:
+const mockData = [{id: 1, name: 'Example'}]"
+
+Phase 2: "Connect to Supabase [table]:
+Replace mock data with real queries + error handling"
+```
+
+### Single-Brick Development
+❌ "Add search + filters + sorting + pagination"  
+✅ Four separate prompts for each feature
+
+### Context Anchoring
+```
+"Add [feature].
+
+ANCHOR: [App type], [theme], [roles], [auth method]
+
+[Feature details]"
+```
+
+## Quality Gates
+
+### Before Each Prompt
+- [ ] Single, specific goal
+- [ ] Constraints identified  
+- [ ] Protected components noted
+
+### After Each Change
+- [ ] Works as intended
+- [ ] Zero console errors
+- [ ] Mobile responsive
+- [ ] Existing features intact
+
+## Success Indicators
+**✅ Expert level**: 95%+ first-try success, zero error loops, consistent quality  
+**🚨 Warning signs**: Frequent fixes, ignored constraints, declining code quality
 
 ## Emergency Commands
-
-### When Things Go Wrong
-- **Restore Point**: "Revert to the last working version"
-- **Clean Slate**: "Remove all recent changes to [component]"
-- **Fresh Start**: "Create a new [component] from scratch with [requirements]"
-
-### Debug Mode
-- **Investigation**: "Analyze why [feature] isn't working without changing code"
-- **Comparison**: "Compare current version with version from [time] and highlight differences"
-- **Explanation**: "Explain what this code does: [paste code]"
-
-## Workflow Optimization
-
-### Development Sequence
-1. **Static UI First**: Build layout and components
-2. **Data Layer**: Add database tables and basic CRUD
-3. **Authentication**: Implement user system
-4. **Business Logic**: Add specific app functionality
-5. **Polish**: Styling, responsive design, error handling
-
-### Credit Conservation
-- Use Visual Editor for simple styling changes
-- Plan prompts before sending
-- Use Chat Mode for exploration
-- Be specific to avoid iterations
-
-### Quality Checkpoints
-After every 3-5 prompts:
-- Test the app manually
-- Check console for errors
-- Verify mobile responsiveness
-- Pin current version if stable
-
-## Troubleshooting Decision Tree
-
-```
-Issue Encountered
-    ↓
-Is it a simple UI tweak?
-    ↓ YES → Use Visual Editor
-    ↓ NO
+- **Stuck**: Chat Mode → "Investigate without changes"
+- **Memory loss**: "IMPORTANT: You missed [constraint]. Redo following this rule"
+- **Messy code**: "Review [component] for issues. Provide improvement plan without implementing"
 Is it a logic/data problem?
     ↓ YES → Switch to Chat Mode
     ↓ NO

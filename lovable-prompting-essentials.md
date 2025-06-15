@@ -1,104 +1,82 @@
 # Lovable AI Prompting Essentials
 
-## Core Principles for Effective Prompting
+## CLEAR Framework 2.0
 
-### 1. The CLEAR Framework
-- **Concise**: Be direct, avoid filler words
-- **Logical**: Break complex requests into ordered steps
-- **Explicit**: State exactly what you want and don't want
-- **Adaptive**: Refine prompts based on results
-- **Reflective**: Learn from what works and what doesn't
+**C**oncise: Surgical precision, no filler  
+❌ "Make login better" → ✅ "Set login button padding py-3 px-6, background #3B82F6, text white"
 
-### 2. Foundation Setup: Knowledge Base
-Before any prompting, establish your project's "brain":
-- Product vision and requirements
-- User personas and journeys
-- Key features and functionality
-- Design guidelines and constraints
-- Role-specific behaviors (Admin, User, etc.)
+**L**ogical: Single-step focus  
+❌ "Build signup + stats + blue buttons" → ✅ Three separate prompts
 
-**Pro Tip**: Auto-generate knowledge base with: *"Generate knowledge for my project based on features implemented so far"*
+**E**xplicit: Zero assumptions  
+❌ "Add profiles" → ✅ "Create UserProfile.js with avatar, name, email. Props: userId (string), showEdit (boolean)"
 
-## Optimal Prompt Structure
+**A**daptive: Specific feedback vs "Try to Fix"  
+"Email validation missing. Add regex check before form submission"
 
-### Basic Template
+**R**eflective: Track successful patterns
+
+## Knowledge Base Setup
 ```
-Context: [Background/role setup]
-Task: [Specific goal]
-Guidelines: [Preferred approach]
-Constraints: [Hard limits/must-not-dos]
+PROJECT: [Purpose + audience in one sentence]
+
+DESIGN SYSTEM:
+- Colors: Primary #3B82F6, Secondary #64748B
+- Buttons: rounded-lg py-2 px-4
+- Cards: border border-gray-200 rounded-lg p-4
+
+FEATURES: [3-5 numbered core features]
+CONSTRAINTS: [Critical rules that never change]
 ```
 
-### Effective Examples
+## Front-End First: Risk Mitigation
 
-**❌ Poor Prompt:**
-"Make this app better"
+**Process**: Static UI → Perfect with mock data → Connect backend surgically
 
-**✅ Good Prompt:**
-"On the `/dashboard` page, add a table showing recent transactions with pagination. Include columns for date, amount, status, and customer name. Use Tailwind CSS styling consistent with existing components."
+```
+Static Phase:
+"Create UserGrid.js with hardcoded array:
+const mockUsers = [{id: 1, name: 'John', status: 'active'}]
+Build complete grid functionality."
 
-## Development Workflow
+Connection Phase:
+"Replace mock data with Supabase query.
+Add error handling and loading states."
+```
 
-### Chat Mode vs Default Mode
-- **Chat Mode**: Planning, debugging, brainstorming (no code changes)
-- **Default Mode**: Direct implementation when you have a clear plan
+## Advanced Techniques
 
-### Iterative Development Pattern
-1. **Start Small**: Single feature at a time
-2. **Test Immediately**: Verify each addition works
-3. **Refine**: Use feedback to improve
-4. **Expand**: Add next feature only after current one is stable
+### Visual Prompting
+- Screenshots + "Build with this layout"
+- Design mockups + "Create components matching this"
+- Broken UI image + arrows + "Fix alignment shown in red"
 
-## Advanced Prompting Strategies
+### Context Anchoring (Prevent Memory Loss)
+```
+"Add search feature.
 
-### Context Management
-- **Reference Specifics**: Mention exact pages, components, or functions
-- **Provide Examples**: Show desired format or behavior
-- **Set Boundaries**: "Do not modify `Layout.tsx` while implementing this"
+ANCHOR: Task management app, blue theme #3B82F6, 
+admin/member roles, Supabase auth.
 
-### Error Prevention
-- **Version Control**: Pin stable versions after working features
-- **Incremental Changes**: One feature per prompt
-- **Clear Instructions**: Repeat critical requirements in follow-ups
+[Feature details]"
+```
 
-### Visual Guidance
-- Attach screenshots for UI changes
-- Upload design mockups for styling reference
-- Use Visual Editor for minor tweaks instead of prompts
+### Safe Refactoring
+```
+"Refactor UserProfile.js into sub-components.
 
-## Common Pitfalls to Avoid
+CRITICAL: External API unchanged, all props identical, 
+functionality preserved. Internal improvement only."
+```
 
-1. **Multiple Features in One Prompt**: Leads to generic, confused output
-2. **Vague Descriptions**: Results in irrelevant or incorrect code
-3. **Ignoring Context**: Not using Knowledge Base effectively
-4. **Fighting the AI**: Continuing same prompt instead of rephrasing
-5. **Complexity Overload**: Trying to build everything at once
+## Error Prevention & Recovery
 
-## Quality Assurance
+### Anti-Loop Protocol
+1. STOP "Try to Fix"
+2. Chat Mode: "Analyze without changes"  
+3. Review diagnosis
+4. If complex: Revert to stable version
 
-### Before Publishing
-- Test all user flows manually
-- Verify role-specific access controls
-- Check responsive design on mobile
-- Run security scan for vulnerabilities
-- Validate database schema consistency
-
-### Debugging Strategy
-1. Use Chat Mode for complex issues
-2. Compare version history when bugs appear
-3. Ask AI to explain what changed between versions
-4. Restore to last known good state if needed
-
-## Success Metrics
-
-**You're doing it right when:**
-- Each prompt produces working, testable code
-- The AI understands your project context
-- You can iterate quickly without breaking existing features
-- Your prompts are becoming more specific and effective over time
-
-**Red flags:**
-- Stuck in bug-fixing loops
-- AI ignoring specific instructions
-- Burning through credits without progress
-- Generated code feels generic or disconnected
+### Quality Gates
+**Pre-prompt**: Single goal, constraints identified  
+**Post-change**: Works as intended, zero console errors, mobile responsive
