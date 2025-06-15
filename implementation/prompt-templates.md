@@ -135,6 +135,57 @@ to verify the app operates precisely as it did before."
 
 ---
 
+## 🛠️ Community CustomGPT Integration Templates
+
+### Foundation-First Development (Community Best Practice)
+```
+PROJECT SETUP WORKFLOW:
+1. "Use Lovable Base Prompt Generator to structure initial idea"
+2. "Use Lovable PRD Generator to create comprehensive documentation"  
+3. "Upload PRD and design docs to GitHub repo"
+4. "Reference documentation in every Lovable prompt"
+
+DOCUMENTATION REFERENCE PROMPT:
+"Before making any changes, read the project documentation from GitHub and confirm your understanding of:
+- Project scope and core features
+- Design system and patterns
+- Technical constraints and limitations
+- Files that should remain unchanged
+
+Then proceed with: [your specific request]"
+```
+
+### Community Refactoring Template (300+ Line Rule)
+```
+FILE SIZE MONITORING:
+"Review the current project and identify any files over 300 lines that need refactoring for maintainability."
+
+SAFE REFACTORING:
+"Please refactor {filename.tsx} to break it into more manageable files but do not break any current functionality and do not make any design changes either. You are only permitted to split one main file into more smaller files. Make sure to delete any unused files/code as well, but once again DO NOT BREAK ANY FUNCTIONALITY. Make sure to tell me which files were created and their names when you are done."
+
+POST-REFACTOR VERIFICATION:
+"Confirm all functionality works exactly as before refactoring. Test key user flows and report any issues."
+```
+
+### Debugging with Community Experience (6+ Months Patterns)
+```
+SYSTEMATIC DEBUGGING APPROACH:
+"Use the Lovable Debugging Wizard approach:
+1. Identify the specific error and context
+2. Review recent changes that might have caused it
+3. Check for common patterns in similar issues
+4. Provide templated debugging prompt
+5. Verify fix doesn't break other functionality"
+
+ANTI-ROGUE DEBUGGING:
+"This is a debugging session. Focus only on the specific error:
+[Error details]
+
+Do not modify unrelated files or features. Reference project documentation for context and constraints."
+```
+
+---
+
 ## 🔧 Debugging Templates
 
 ### Error Recovery Protocol
@@ -399,4 +450,85 @@ use next time to avoid these issues."
 
 ---
 
-*Last Updated: Based on Lovable Prompting Handbook (Jan 2025) + Community Reports*
+## 🎯 Credit Optimization Templates (Community-Proven)
+
+### Multi-Model Analysis Workflow
+```
+EXTERNAL AI ANALYSIS PROMPTS (Use ChatGPT, Claude, etc.):
+
+PROJECT REVIEW:
+"Analyze this Lovable project code and list all past build errors and conflicts. 
+[Paste project files or descriptions]"
+
+ARCHITECTURE ASSESSMENT:
+"Generate a comprehensive README for this project including:
+- Architecture overview and design patterns
+- Complete dependency list and versions  
+- Tech stack breakdown and rationale
+- Database schema and relationships
+- API endpoints and integration points
+- Deployment requirements"
+
+ROADMAP OPTIMIZATION:
+"Based on this project roadmap: [paste roadmap]
+Suggest architecture optimizations for the next development phase.
+Identify potential bottlenecks and recommend solutions."
+
+COMPARATIVE ANALYSIS:
+"Compare the outputs from different AI models for this feature request and identify:
+- Consistency across recommendations
+- Conflicting approaches and their trade-offs
+- Best practices alignment
+- Implementation complexity assessment"
+```
+
+### Credit Conservation Implementation
+```
+EFFICIENT LOVABLE WORKFLOW:
+
+PLANNING PHASE (Chat Mode):
+"Create a detailed implementation plan for [specific feature]:
+1. Break down into smallest possible steps
+2. Identify dependencies and prerequisites  
+3. Suggest order of implementation
+4. Highlight potential risks or complications"
+
+EXECUTION PHASE:
+→ Review plan in Chat Mode
+→ Click "Implement plan" button for automated execution
+→ Use Developer Mode for manual tweaks (styles, text, simple logic)
+
+MANUAL OPTIMIZATION:
+- Handle translations manually in Developer Mode
+- Adjust CSS/styling without prompts
+- Update static content directly
+- Save prompts for complex logic only
+```
+
+### Smart Prompt Length Strategy
+```
+PROGRESSIVE PROMPT BUILDING:
+
+LEVEL 1 - MINIMAL:
+"Add user authentication"
+
+LEVEL 2 - CLARIFIED (if Level 1 unclear):
+"Add email/password authentication using Supabase with signup and login pages"
+
+LEVEL 3 - DETAILED (if Level 2 has issues):
+"Implement Supabase authentication system:
+- Signup page with email/password validation
+- Login page with error handling  
+- Protected dashboard route
+- Logout functionality
+- Redirect logic after successful auth"
+
+LEVEL 4 - COMPREHENSIVE (complex features only):
+"Build complete authentication flow with Supabase:
+[Include full context, constraints, and detailed requirements]"
+
+HALLUCINATION MONITORING:
+- Watch for unexpected changes in Level 3+ prompts
+- Revert to shorter prompts if AI adds unwanted features
+- Document successful prompt length for each feature type
+```
