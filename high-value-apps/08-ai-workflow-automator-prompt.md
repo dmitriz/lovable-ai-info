@@ -6,6 +6,7 @@
 - Mobile-responsive design with dark mode support
 - Use local storage for all data (no external automation initially)
 - Basic workflow creation and management
+- **Minimalistic Design Focus:** Create a very light design that minimizes vertical space usage. Each content line should take up as little vertical space as possible while using horizontal space more generously. Avoid extra visual elements between content lines - use only white spaces for separation. Focus on content over decoration with a clean, minimal aesthetic.
 
 **Constraints:**
 - Start with workflow design only
@@ -73,11 +74,32 @@ const templates = [
 
 ---
 
-## Future Enhancements (After MVP)
-- Visual drag-and-drop builder
-- Real automation execution
-- AI agent integration
-- Performance monitoring
-- Team workflow sharing
+## Development Roadmap
 
-Start with the MVP: Create a simple workflow management interface with templates and step-by-step builder with dark mode.
+**Start with MVP:** Create a simple workflow management interface with templates and step-by-step builder with dark mode.
+
+### Phase 1: Basic Workflow Designer (MVP)
+✅ Build foundation with workflow creation, templates, step management, and dark mode
+
+### Phase 2: Visual Drag-and-Drop Builder
+🔄 Add intuitive visual interface with drag-and-drop workflow construction
+
+### Phase 3: Workflow Execution Engine
+🔄 Implement real automation execution with step-by-step processing
+
+### Phase 4: AI Agent Integration
+🔄 Connect AI agents and services for intelligent workflow automation
+
+### Phase 5: Advanced Triggers & Actions
+🔄 Add webhooks, API integrations, and conditional logic systems
+
+### Phase 6: Performance Monitoring
+🔄 Create execution analytics, error tracking, and performance optimization
+
+### Phase 7: Team Collaboration
+🔄 Enable shared workflows, team libraries, and permission management
+
+### Phase 8: Enterprise Features
+🔄 Add enterprise-grade security, audit logs, and compliance features
+
+**Next Step After MVP:** Implement Phase 2 - Visual Drag-and-Drop Builder

@@ -6,6 +6,7 @@
 - Mobile-responsive design with dark mode support
 - Use local storage for all data (no database initially)
 - Clean, minimalist UI with ShadCN components
+- **Minimalistic Design Focus:** Create a very light design that minimizes vertical space usage. Each content line should take up as little vertical space as possible while using horizontal space more generously. Avoid extra visual elements between content lines - use only white spaces for separation. Focus on content over decoration with a clean, minimal aesthetic.
 
 **Constraints:**
 - Start with core functionality only
@@ -42,11 +43,32 @@ const agents = [
 
 ---
 
-## Future Enhancements (After MVP)
-- Real-time monitoring dashboard
-- Workflow builder with drag-and-drop
-- Performance analytics and charts
-- Database integration with Supabase
-- Multi-agent coordination features
+## Development Roadmap
 
-Start with the MVP: Create a simple agent management interface with add/edit/delete functionality and dark mode toggle.
+**Start with MVP:** Create a simple agent management interface with add/edit/delete functionality and dark mode toggle.
+
+### Phase 1: Core Agent Management (MVP)
+✅ Build the foundation with agent list, add/edit forms, status toggle, and dark mode
+
+### Phase 2: Agent Details & Configuration  
+🔄 Add detailed agent configuration panels with capability settings and custom parameters
+
+### Phase 3: Real-time Status Monitoring
+🔄 Implement live status updates, health checks, and basic performance indicators
+
+### Phase 4: Workflow Integration
+🔄 Add workflow builder with drag-and-drop interface for connecting agents
+
+### Phase 5: Analytics Dashboard
+🔄 Create performance analytics with charts, usage metrics, and trend analysis
+
+### Phase 6: Database Integration
+🔄 Migrate from local storage to Supabase with user authentication and data sync
+
+### Phase 7: Multi-agent Coordination
+🔄 Enable complex multi-agent workflows with task distribution and coordination
+
+### Phase 8: Advanced Features
+🔄 Add agent marketplace, custom plugins, and advanced monitoring tools
+
+**Next Step After MVP:** Implement Phase 2 - Agent Details & Configuration

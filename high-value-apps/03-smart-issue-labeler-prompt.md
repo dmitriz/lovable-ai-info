@@ -6,6 +6,7 @@
 - Mobile-responsive design with dark mode support
 - Use local storage for all data (no external APIs initially)
 - Simple rule-based labeling system
+- **Minimalistic Design Focus:** Create a very light design that minimizes vertical space usage. Each content line should take up as little vertical space as possible while using horizontal space more generously. Avoid extra visual elements between content lines - use only white spaces for separation. Focus on content over decoration with a clean, minimal aesthetic.
 
 **Constraints:**
 - Start with manual issue entry and basic labeling
@@ -56,11 +57,32 @@ const labelRules = [
 
 ---
 
-## Future Enhancements (After MVP)
-- GitHub API integration
-- AI-powered classification
-- Bulk processing capabilities
-- Team productivity analytics
-- Webhook automation
+## Development Roadmap
 
-Start with the MVP: Create a simple issue tracker with basic keyword-based auto-labeling and dark mode.
+**Start with MVP:** Create a simple issue tracker with basic keyword-based auto-labeling and dark mode.
+
+### Phase 1: Basic Issue Management (MVP)
+✅ Build foundation with manual issue entry, keyword labeling, and dark mode
+
+### Phase 2: Advanced Labeling Rules
+🔄 Add complex rule conditions, priority detection, and custom label categories
+
+### Phase 3: GitHub API Integration
+🔄 Connect to GitHub for automatic issue import and real-time synchronization
+
+### Phase 4: AI-Powered Classification
+🔄 Implement machine learning models for intelligent issue categorization
+
+### Phase 5: Bulk Processing
+🔄 Add batch operations for processing multiple issues simultaneously
+
+### Phase 6: Analytics Dashboard
+🔄 Create team productivity metrics and issue pattern analysis
+
+### Phase 7: Automation & Webhooks
+🔄 Enable automated workflows with webhook triggers and actions
+
+### Phase 8: Multi-Repository Support
+🔄 Expand to handle multiple repositories with centralized management
+
+**Next Step After MVP:** Implement Phase 2 - Advanced Labeling Rules
