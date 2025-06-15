@@ -263,6 +263,89 @@ Share this analysis before making any code changes."
 
 ---
 
+## 🧠 Advanced Prompting Templates (2025 Update)
+
+### Meta Prompting (AI-Assisted Improvement)
+```
+PROMPT ENHANCEMENT:
+"Review my last prompt and identify any ambiguity or missing info. How can I rewrite it to be more concise and precise?"
+
+PROMPT OPTIMIZATION:
+"Rewrite this prompt to be more specific and detailed: '[Your original prompt]'"
+
+ALTERNATIVE APPROACH:
+"The current approach isn't working. Suggest 2-3 alternative strategies for [specific goal] and explain the trade-offs of each."
+```
+
+### Reverse Meta Prompting (Documentation)
+```
+SESSION DOCUMENTATION:
+"Summarize the errors we encountered while setting up [feature] and how they were resolved. Create a detailed prompt I can use next time to avoid these mistakes."
+
+SOLUTION TEMPLATE CREATION:
+"Based on our successful implementation of [feature], create a reusable prompt template that captures the key decisions and constraints for future similar projects."
+
+DEBUGGING PLAYBOOK:
+"Document the debugging process we just completed as a step-by-step troubleshooting guide for [specific error type]."
+```
+
+### Stripe Integration (Official Template)
+```
+STRIPE SETUP:
+"Initiate a Stripe connection in test mode using the configuration detailed below:
+
+PRODUCT DETAILS:
+- Product IDs: [Your Product IDs]  
+- Pricing Model: [One-time or Subscription]
+- Webhook Endpoint: [Your Webhook Endpoint]
+
+FRONTEND REQUIREMENTS:
+- Style the payment form as: [Describe desired payment form]
+- Success Redirect: [Success URL]
+- Cancel Redirect: [Cancel URL]
+
+CONSTRAINTS:
+- Use test mode only
+- Include proper error handling
+- Ensure mobile responsiveness
+
+Please refrain from altering any existing code and confirm all necessary information is included."
+
+NOTE: Use Stripe Secret Key and Webhook Signing Secret securely in Supabase Edge Function Secrets—never include them in prompts.
+```
+
+### Advanced Debugging Templates
+```
+INITIAL ERROR INVESTIGATION:
+"The same error continues to occur. Take a moment to perform a preliminary investigation to uncover the root cause. Examine logs, workflows, and dependencies before making any changes. Provide analysis first."
+
+DEEP ERROR ANALYSIS:
+"This issue persists without resolution. Perform a thorough analysis of the flow and dependencies. Stop all modifications until the root cause is identified with complete certainty. Document failures, reasons, and patterns observed."
+
+SYSTEM-WIDE REVIEW:
+"This requires a comprehensive re-evaluation of the entire system. Map the flow systematically—covering authentication, database interactions, integrations, state management, and redirects. Evaluate each component to pinpoint failures."
+
+ROOT CAUSE DOCUMENTATION:
+"Create a detailed report outlining expected vs actual behavior, identifying specific discrepancies. Avoid code suggestions until you have evidence-based insights with clear reasoning."
+```
+
+### Mobile-First Responsive (Enhanced)
+```
+COMPREHENSIVE RESPONSIVE UPDATE:
+"Always make things responsive on all breakpoints, with a focus on mobile first. Use modern UI/UX best practices for determining how breakpoints should change the components. Use ShadCN and Tailwind built-in breakpoints instead of anything custom, unless the user prompts for custom breakpoints directly.
+
+MOBILE OPTIMIZATION PROCESS:
+1. Analyze current layout and responsiveness
+2. Identify necessary adjustments for smaller screens and touch interactions
+3. Outline detailed plan before editing any code
+4. Test thoroughly across devices
+5. Ensure app behaves exactly as it does on desktop
+
+If unsure about any aspect, pause and propose solutions before proceeding."
+```
+
+---
+
 ## 🎯 Success Patterns
 
 ### The 4-Part Precision Prompt

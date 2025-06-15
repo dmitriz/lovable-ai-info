@@ -24,17 +24,24 @@
 
 **Proven Solutions (2025 Update):**
 ```
-IMMEDIATE ACTION (Official Lovable Protocol):
-1. STOP clicking "Try to Fix" immediately after 2nd failure
-2. Switch to Chat Mode: "Something's off. Walk me through what's happening"
-3. Ask for step-by-step debugging help: "What fixes have we tried?"
-4. If still unclear: Revert to stable version and rebuild incrementally
+ENHANCED OFFICIAL PROTOCOL (5-Level Debugging):
+1. STOP "Try to Fix" after 2nd failure
+2. Chat Mode Analysis: "Something's off. Walk me through what's happening"
+3. Initial Investigation: "Take a moment to perform preliminary investigation to uncover root cause"
+4. Deep Analysis: "Perform thorough analysis of flow and dependencies, halt modifications until root cause identified"
+5. System Review: "Comprehensive re-evaluation of entire system required"
 
-PREVENTION (Community-Proven):
-- One feature per prompt (never combine tasks)
-- Use reverse meta prompting: Document debugging sessions
+ESCALATION PROMPTS (Use in sequence):
+Level 1: "Explain the meaning of this error, its origins, and logical sequence that led to it"
+Level 2: "The problem continues. Map the entire system flow—authentication, database, integrations, state management"
+Level 3: "Generate detailed report outlining expected vs actual behavior, specific discrepancies"
+Level 4: "Pause and reassess entire strategy. No code edits—systematic examination required"
+
+PREVENTION (Community + Official):
+- Single feature per prompt (never combine tasks)
+- Use reverse meta prompting: "Document this debugging session as a reusable template"
+- Include "pause and clarify if uncertain" in complex prompts
 - Test after every single change
-- Include diagnostic constraints in every prompt
 ```
 
 ### Issue #2: Unintended Component Modifications
